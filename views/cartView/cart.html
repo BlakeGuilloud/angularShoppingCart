@@ -1,0 +1,14 @@
+<ng-include src= "'views/nav.html'"></ng-include>
+<section>
+  <article ng-repeat='item in cartItems'>
+
+    <img ng-src="{{item.MainImage.url_170x135}}" alt="">
+    <p>{{item.price | currency}}</p>
+    <p>{{item.title}}</p>
+    <div class="buttons">
+      <button><a href="#/store/{{item.listing_id}}">View Item</a></button>
+      <button ng-click='removeFromCart(item)'><a href="">Remove From Cart</a></button>
+    </div>
+
+  </article>
+</section>

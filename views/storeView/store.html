@@ -1,0 +1,13 @@
+<ng-include src= "'views/nav.html'"></ng-include>
+
+<section>
+  <article ng-repeat='item in items' class=''>
+    <img ng-src="{{item.MainImage.url_170x135}}" alt="">
+      <p>{{item.price | currency}}</p>
+      <p>{{item.title}}</p>
+    <div class="buttons">
+      <button><a href="{{item.listing_id}}">View Item</a></button>
+      <button ng-click='addItem(item)'><a href="">Add To Cart</a></button>
+    </div>
+  </article>
+</section>
